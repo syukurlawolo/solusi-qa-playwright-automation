@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="10.946751">
+<testsuite name="auth.spec.ts" timestamp="2026-04-18T09:40:03.610Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.421" errors="0">
+<testcase name="QX-2: Auth - Successful login" classname="auth.spec.ts" time="8.421">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2026-04-18T09:40:03.610Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.693" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="3.17">
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="3.523">
+</testcase>
+</testsuite>
+</testsuites>
