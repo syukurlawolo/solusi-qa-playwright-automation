@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('QX-2: Auth - Successful login', async ({ page }) => {
+test('QX-2: Auth - Successful login with valid credentials', async ({ page }) => {
   // Buka halaman login
   await page.goto('https://qa-sandbox-deploy.vercel.app/');
 
