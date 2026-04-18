@@ -30,7 +30,7 @@ export default defineConfig({
     /* Ambil screenshot otomatis hanya jika test gagal */
     screenshot: 'only-on-failure',
     /* Rekam video hanya jika test gagal */
-    video: 'retain-on-failure',
+    video: 'on',
   },
 
   /* Pilih browser yang ingin dijalankan */
