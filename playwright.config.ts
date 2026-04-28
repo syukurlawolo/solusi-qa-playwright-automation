@@ -26,7 +26,8 @@ export default defineConfig({
     // baseURL: 'http://localhost:5173',
 
     /* Rekam jejak (trace) saat test gagal agar mudah di-debug */
-    trace: 'on-first-retry',
+    //trace: 'on-first-retry',
+    trace: 'on',
     /* Ambil screenshot otomatis hanya jika test gagal */
     screenshot: 'only-on-failure',
     /* Rekam video hanya jika test gagal */
@@ -35,20 +36,30 @@ export default defineConfig({
 
   /* Pilih browser yang ingin dijalankan */
   projects: [
+    // TAHAP 1: Menjalankan Negative Case (Testing sebelum login sukses)
     {
-      name: 'chromium',
+      name: 'negative-login',
+      testMatch: /auth_negatif_case\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
     },
-    /* Aktifkan browser lain jika diperlukan untuk portofolio Anda */
-    /*
+
+    // TAHAP 2: Melakukan Login Sukses (Setelah negative case selesai)
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'setup',
+      testMatch: /auth\.setup\.ts/,
+      use: { ...devices['Desktop Chrome'] },
+      
     },
+
+    // TAHAP 3: Fitur Utama (Setelah login sukses & session tersimpan)
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'e2e-functional',
+      testMatch: ['employee.spec.ts'], // File selain login
+      use: { 
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json', 
+      },
+      dependencies: ['setup'], // Menunggu login sukses beres
     },
-    */
   ],
 });

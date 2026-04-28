@@ -1,6 +1,48 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.593689">
-<testsuite name="auth.spec.ts" timestamp="2026-04-18T13:58:45.264Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.252" errors="0">
-<testcase name="QX-2: Auth - Successful login" classname="auth.spec.ts" time="6.252">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="19.780060000000002">
+<testsuite name="auth.setup.ts" timestamp="2026-04-26T19:56:43.007Z" hostname="setup" tests="1" failures="0" skipped="0" time="5.854" errors="0">
+<testcase name="QX-2: Auth - Successful login with valid credentials" classname="auth.setup.ts" time="5.854">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\auth.setup.ts-QX-2-Auth----89a03-ogin-with-valid-credentials-setup\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="employee.spec.ts" timestamp="2026-04-26T19:56:43.007Z" hostname="e2e-functional" tests="5" failures="0" skipped="0" time="16.905" errors="0">
+<testcase name="Employee Module › QX-20: Display Employee List on Dashboard" classname="employee.spec.ts" time="2.689">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\employee-Employee-Module-Q-35e09--Employee-List-on-Dashboard-e2e-functional\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Employee Module › QX-22: Add New Employee with Complete Data" classname="employee.spec.ts" time="3.942">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\employee-Employee-Module-Q-c6cb0-Employee-with-Complete-Data-e2e-functional\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Employee Module › QX-23: Edit Employee" classname="employee.spec.ts" time="3.624">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\employee-Employee-Module-QX-23-Edit-Employee-e2e-functional\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Employee Module › QX-25: Cancel Add Employee" classname="employee.spec.ts" time="3.014">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\employee-Employee-Module-QX-25-Cancel-Add-Employee-e2e-functional\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Employee Module › QX-24: Delete Employee" classname="employee.spec.ts" time="3.636">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\employee-Employee-Module-QX-24-Delete-Employee-e2e-functional\video.webm]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

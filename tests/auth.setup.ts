@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test as setup, expect } from '@playwright/test';
 
-test('QX-2: Auth - Successful login with valid credentials', async ({ page }) => {
-  // Buka halaman login
+const authFile = 'playwright/.auth/user.json';
+setup('QX-2: Auth - Successful login with valid credentials', async ({ page }) => {
   await page.goto('https://qa-sandbox-deploy.vercel.app/');
 
   // Input Email
@@ -15,9 +15,10 @@ test('QX-2: Auth - Successful login with valid credentials', async ({ page }) =>
 
   // Klik Button Login
   await page.getByRole('button', { name: 'Login to System' }).click();
-
-  // --- VALIDASI (ASERSION) ---
-  // Pastikan muncul teks "QA Sandbox" sebagai tanda login berhasil
   const dashboardHeader = page.getByText('QA Sandbox');
   await expect(dashboardHeader).toBeVisible(); 
+  await expect(page).toHaveURL('https://qa-sandbox-deploy.vercel.app/'); 
+
+  // Simpan session
+  await page.context().storageState({ path: authFile });
 });
